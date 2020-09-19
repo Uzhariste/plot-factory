@@ -6,8 +6,9 @@ source("./src/pages/Result/index.R",encoding = "UTF-8")
 
 router<- make_router(
   route("/", uiHome,serverHome),
-  route("/dataImport", uiDataImport,serverDataImport),
-  route("/type", uiType,serverType),
-  route("/edition", uiEdition,serverEdition),
-  route("/result", uiResult,serverResult),
+  route("dataImport", uiDataImport,serverDataImport),
+  route("type", uiType,serverType),
+  route("edition", uiEdition,serverEdition),
+  route("result", uiResult,serverResult)
 )
+

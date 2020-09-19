@@ -1,13 +1,16 @@
 library(shiny)
 library(shiny.router)
+library(shinyjs)
+
 
 source("./src/config/index.R")
 
 
 ui <- tags$html(
   tags$head(
-    
-  ),
+    useShinyjs()
+    )
+  ,
   tags$body(
     router_ui()
   )

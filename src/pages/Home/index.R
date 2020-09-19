@@ -1,5 +1,8 @@
-uiHome <- tags$div("Hello Home")
+uiHome <- tags$div(
+  class = "home",
+  sideBarPanel(id = "sideBarPanelHome")
+)
 
 serverHome <- function(input, output, session){
-  
+  sideBarPanelServer(id = "sideBarPanelHome")
 }
