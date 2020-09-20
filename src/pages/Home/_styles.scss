@@ -1,0 +1,17 @@
+@import "../../components/SideBarPanel/styles";
+
+@import "../../functions/ui/MainPanel/styles";
+@import "../../functions/ui/MainText/styles";
+
+.home{
+  display: flex;
+  
+  @include sideBarPanel();
+  
+  @include mainPanel(){
+    @include mainText(){
+      margin-top: 10%;
+    }
+  }
+  
+}

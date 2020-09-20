@@ -1,8 +1,23 @@
 uiHome <- tags$div(
   class = "home",
-  sideBarPanel(id = "sideBarPanelHome")
+  sideBarPanel(id = "sideBarPanelHome"),
+  mainPanel(
+    mainText = mainText(
+      title = "Seja bem-vindo!",
+      text = "A Plot Factory é uma plataforma voltada para a criação de gráficos
+      interativos através da ferramenta estatística Shiny disponível no R."
+      ),
+    mainButton (
+      mainButton = pageTransitionButton(
+        id = "pageTransitionButtonHome",
+        label = "Importar dados"
+      )
+    )
+  )
 )
 
 serverHome <- function(input, output, session){
   sideBarPanelServer(id = "sideBarPanelHome")
+  
+  pageTransitionButtonServer(id = "pageTransitionButtonHome", page = "dataImport")
 }
